@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Schleifchen-Turnier</title>
+    <link rel="stylesheet" href="css/basics.css">
+    <link rel="stylesheet" href="css/players.css">
+    <link rel="stylesheet" href="css/generator.css">
+    <link rel="stylesheet" href="css/fields.css">
+</head>
+<body>
+    <h1>Schleifchenturnier</h1>
+    <div id="tabs-menu" class="tabs">
+        <div target="player-tab" class="tab-selector active"><p>Spieler</p></div>
+        <div target="fields-tab" class="tab-selector"><p>Felder</p></div>
+        <div target="settings-tab" class="tab-selector"><p>Einstellungen</p></div>
+    </div>
+    <div id="player-tab" class="tab active">
+        <h2>Spieler</h2>
+        <div class="newPlayer">
+            <input id="player-name-input" class="pName" placeholder="Name">
+            <input id="player-level-input" type="number" placeholder="Level">
+            <button type="button" onclick="addNewPlayer()">Hinzufügen</button>
+        </div>
+        <div class="allPlayers">
+            <ul id="playerList">
+    
+            </ul>
+        </div>
+    </div>    
+    <div id="fields-tab" class="tab">
+        <h2>Felder</h2>
+        <label for="teamSizeInput">Team-Größe</label>
+        <input id="teamSizeInput" type="number" class="tSize" value="6">
+        <label for="teamCountInput">Anzahl Teams</label>
+        <input id="teamCountInput" type="number" value="6">
+        <button type="button" onclick="generateTeams()">Neue Teams</button>
+    </div>
+    <div id="settings-tab" class="tab">
+
+    </div>    
+</body>
+<script src="js/classes/player.js"></script>
+<script src="js/classes/tournament.js"></script>
+<script src="js/basics.js"></script>
+<script src="js/ui/player-tab.js"></script>

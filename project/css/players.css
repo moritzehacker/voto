@@ -1,0 +1,97 @@
+.players {
+    max-width: 1600px;
+    margin-left: calc((100% - 1600px) / 2);
+}
+
+.newPlayer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    border-radius: 35px;
+    margin: 25px 0;
+    
+    input, button {
+        border: none;
+        border-radius: 35px;
+        padding: 15px;
+    }
+    input#player-name-input {
+        flex: 8;
+    }
+    input#player-level-input {
+        flex: 2;
+    }
+    button {
+        flex: 2;
+    }
+}
+
+input:focus {
+    background: linear-gradient(to right, #e64946, lightgray);
+    outline: none;
+    -moz-appearance: textfield;
+    color:#080505;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+button {
+    background: #e64946;
+    font-weight: 700;
+}
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #e64946, #e64946, rgb(102, 199, 194));
+    color: #f2f2f2;
+    outline: none;
+}
+button:active {
+    background: #121212;
+}
+.allPlayers {
+    background: linear-gradient( to bottom left, rgb(102, 199, 194), #e64946);
+    border-radius: 25px;
+    min-height: 350px;
+}
+
+#playerList {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0;
+}
+#playerList li {
+    width: calc(100% - 45px);
+    margin-left: 30px;
+    font-size: 26px;
+    background: transparent;
+    color: #121212;
+    border-bottom: #f2f2f2cc solid 1px;
+}
+#playerList li:last-child {
+    border-bottom: none;
+}
+.playerName {
+    width: 50%;
+    display: inline-flex;
+    color: #f2f2f2;
+}
+.playerTeam, 
+.playerGames {
+    width: 15%;
+    display: inline-flex;
+    justify-content: center;
+}
+.btn-delete {
+    background: transparent;
+    font-size: 26px;
+    margin: 0;
+    padding-right: 0;
+    width: 20%;
+    border: none;
+}

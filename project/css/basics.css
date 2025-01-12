@@ -1,0 +1,80 @@
+h1,
+h2 {
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+body {
+    background: linear-gradient(to bottom, rgb(102, 199, 194), #e64946);
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    color: #f2f2f2;
+    height: 100%;
+}
+
+.tab {
+    display: none;
+    margin: 0 auto;
+    max-width: 1550px;
+    padding: 25px;
+    border-radius: 25px;
+    background-color: steelblue;
+
+    h2 {
+        color: #e64946;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+}
+
+.tab.active {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.games {
+    margin-left: calc((100% - 1600px) / 2);
+    max-width: 1600px;
+}
+
+.tabs {
+    margin: 0 auto 25px;
+    max-width: 1600px;
+    display: flex;
+    width: 100%;
+    background-color: lightgreen;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    gap: 2px;
+}
+
+.tabs .tab-selector {
+    flex: auto;
+    text-align: center;
+    background-color: lightseagreen;
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.active {
+        background-color: steelblue;
+    }
+}
+
+.tabs :first-child {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.tabs :last-child {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
