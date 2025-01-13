@@ -4,8 +4,8 @@
     <title>Schleifchen-Turnier</title>
     <link rel="stylesheet" href="css/basics.css">
     <link rel="stylesheet" href="css/players.css">
-    <link rel="stylesheet" href="css/generator.css">
     <link rel="stylesheet" href="css/fields.css">
+    <link rel="stylesheet" href="css/settings.css">
 </head>
 <body>
     <h1>Schleifchenturnier</h1>
@@ -22,21 +22,35 @@
             <button type="button" onclick="addNewPlayer()">Hinzufügen</button>
         </div>
         <div class="allPlayers">
-            <ul id="playerList">
-    
-            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="name-header">Name</th>
+                        <th id="level-header">Level</th>
+                        <th id="games-played-header">Gespielt</th>
+                    </tr>
+                </thead>
+                <tbody id="playerList">
+                </tbody>
+            </table>
         </div>
     </div>    
     <div id="fields-tab" class="tab">
         <h2>Felder</h2>
-        <label for="teamSizeInput">Team-Größe</label>
-        <input id="teamSizeInput" type="number" class="tSize" value="6">
-        <label for="teamCountInput">Anzahl Teams</label>
-        <input id="teamCountInput" type="number" value="6">
         <button type="button" onclick="generateTeams()">Neue Teams</button>
     </div>
     <div id="settings-tab" class="tab">
-
+        <h2>Einstellungen</h2>
+        <ul id="settings">
+            <li class="setting">
+                <label for="team-size-input">Team-Größe</label>
+                <input id="team-size-input" type="number" class="tSize" value="6">
+            </li>
+            <li class="setting">
+                <label for="field-count-input">Anzahl Felder</label>
+                <input id="field-count-input" type="number" value="6">
+            </li>
+        </ul>
     </div>    
 </body>
 <script src="js/classes/player.js"></script>
