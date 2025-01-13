@@ -1,0 +1,30 @@
+#settings-tab {
+    h2 {
+        text-align: left;
+        padding-inline-start: 40px;
+    }
+    ul#settings {
+        list-style: none;
+        width: 30%;
+        li {
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            font-size: 30px;
+
+            label {
+                flex: auto;
+            }
+            input {
+                flex: initial;
+                border: none;
+                border-radius: 15px;
+                height: 35px;
+                width: 50px;
+                padding: 5px;
+                text-align: center;
+
+            }
+        }
+    }
+}
