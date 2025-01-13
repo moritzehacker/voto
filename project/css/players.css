@@ -10,6 +10,8 @@
     justify-content: space-between;
     border-radius: 35px;
     margin: 25px 0;
+    padding: 10px;
+    border: 1px solid black;
     
     input, button {
         border: none;
@@ -41,6 +43,7 @@ input::-webkit-inner-spin-button {
 button {
     background: #e64946;
     font-weight: 700;
+    border: none;
 }
 button:hover {
     cursor: pointer;
@@ -55,43 +58,47 @@ button:active {
     background: linear-gradient( to bottom left, rgb(102, 199, 194), #e64946);
     border-radius: 25px;
     min-height: 350px;
+
+    table {
+        width: 90%;
+        margin: 10px 5%;
+
+        #name-header {
+            width: 50%;
+            text-align: left;
+        }
+
+        #playerList {
+            tr {
+                text-align: center;
+                :nth-child(1) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
 }
 
+
 #playerList {
-    list-style: none;
-    display: flex;
     padding: 0;
-    flex-wrap: wrap;
-    justify-content: flex-start;
     margin: 0;
 }
-#playerList li {
-    width: calc(100% - 45px);
-    margin-left: 30px;
-    font-size: 26px;
+
+.btn-delete,
+.btn-priority {
     background: transparent;
-    color: #121212;
-    border-bottom: #f2f2f2cc solid 1px;
-}
-#playerList li:last-child {
-    border-bottom: none;
-}
-.playerName {
+    font-size: 26px;
+    margin: 0;
+    padding: 0;
     width: 50%;
-    display: inline-flex;
-    color: #f2f2f2;
-}
-.playerTeam, 
-.playerGames {
-    width: 15%;
-    display: inline-flex;
-    justify-content: center;
-}
-.btn-delete {
-    background: transparent;
-    font-size: 26px;
-    margin: 0;
-    padding-right: 0;
-    width: 20%;
-    border: none;
+    border-radius: 15px;
+    &:hover {
+        background: linear-gradient(to right, #e64946, rgb(142, 160, 155), rgba(116, 185, 180, 0));
+    }
+    img {
+        z-index:0;
+        margin-top: 6px;
+    }
 }
