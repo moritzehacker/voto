@@ -44,11 +44,11 @@
         <ul id="settings">
             <li class="setting">
                 <label for="team-size-input">Team-Größe</label>
-                <input id="team-size-input" type="number" class="tSize" value="6">
+                <input id="team-size-input" type="number" class="tSize" value="6" onchange="generateOrUpdateFields()">
             </li>
             <li class="setting">
                 <label for="field-count-input">Anzahl Felder</label>
-                <input id="field-count-input" type="number" value="6">
+                <input id="field-count-input" type="number" value="3" onchange="generateOrUpdateFields()">
             </li>
         </ul>
     </div>    
@@ -57,3 +57,4 @@
 <script src="js/classes/tournament.js"></script>
 <script src="js/basics.js"></script>
 <script src="js/ui/player-tab.js"></script>
+<script src="js/ui/fields-tab.js"></script>
